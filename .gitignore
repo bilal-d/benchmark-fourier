@@ -1,0 +1,6 @@
+# ignore object files
+*.obj
+
+# ignore complex vector exports in Octave format
+x_*.mat
+y_*.mat
