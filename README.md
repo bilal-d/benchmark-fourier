@@ -2,8 +2,8 @@
 des [transformées de Fourier discrètes][wk-fr-tfd] de taille $N=128$ et $N=1024$,
 implémentées de diverses façons en C++17, incluant :
 
-- la formule naïve : $X[k] = \sum_{n=0}{N-1} x[n] \mathrm{e}^{-2i\pi kn/N}$ pour $0\le k \lt N$,
-où les [*twiddle factors*][wk-tf] $\omega_N^m=\mathrm{e}^{-2i\pi m/N}$ sont précalculés avec
+- la formule naïve : $X[k] = \displaystyle\sum_{n=0}^{N-1} x[n] \exp(-2i\pi kn/N)$ pour $0\le k \lt N$,
+où les [*twiddle factors*][wk-tf] $\omega_N^m=\exp(-2i\pi m/N)$ sont précalculés avec
 des scripts [Octave][hp-octave],
 - [l’algorithme Cooley–Tukey][wk-en-ct] avec décimation en temps et décimation en fréquence,
 - [l’algorithme Split-radix][wk-en-sr],
@@ -59,8 +59,8 @@ acquire and build C++ open source libraries on Windows][msft-vcpkg].
 of [discrete Fourier transforms][wk-en-dft] of size $N=128$ and $N=1024$,
 implemented in C++17, using:
 
-- the naïve formula: $X[k] = \sum_{n=0}{N-1} x[n] \mathrm{e}^{-2i\pi kn/N}$ for $0\le k \lt N$,
-where [twiddle factors][wk-tf] $\omega_N^m=\mathrm{e}^{-2i\pi m/N}$ are precomputed using
+- the naïve formula: $X[k] = \displaystyle\sum_{n=0}^{N-1} x[n] \exp(-2i\pi kn/N)$ for $0\le k \lt N$,
+where [twiddle factors][wk-tf] $\omega_N^m=\exp(-2i\pi m/N)$ are precomputed using
 [Octave][hp-octave],
 - the [Cooley–Tukey algorithm][wk-en-ct], with decimation-in-time and decimation-in-frequency,
 - the [Split-radix algorithm][wk-en-sr],
